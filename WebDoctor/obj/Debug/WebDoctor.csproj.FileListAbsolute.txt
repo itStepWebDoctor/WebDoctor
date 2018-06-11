@@ -90,3 +90,4 @@ c:\users\kor_i\documents\visual studio 2015\Projects\WebDoctorProject\WebDoctor\
 c:\users\kor_i\documents\visual studio 2015\Projects\WebDoctorProject\WebDoctor\obj\Debug\WebDoctor.Migrations.MigrateDB.resources
 c:\users\kor_i\documents\visual studio 2015\Projects\WebDoctorProject\WebDoctor\obj\Debug\WebDoctor.Migrations.MigrateDB1.resources
 c:\users\kor_i\documents\visual studio 2015\Projects\WebDoctorProject\WebDoctor\obj\Debug\WebDoctor.csprojResolveAssemblyReference.cache
+C:\Users\kor_i\Documents\Visual Studio 2015\Projects\WebDoctorProject\WebDoctor\obj\Debug\WebDoctor.Migrations.MigrateDB11.resources

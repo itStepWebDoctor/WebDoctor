@@ -6,4 +6,60 @@
 <h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>тут записи админа</p>
+<p>Список клиентов</p>
+
+<table class="table table-striped table-condensed table-bordered table-hover">
+    <thead>
+    <tr>
+        <td>
+            <p>Имя</p>
+        </td>
+        <td>
+            <p>Фамилия</p>
+        </td>
+        <td>
+            <p>Отчество</p>
+        </td>
+        <td>
+            <p>ИИН</p>
+        </td>
+        <td>
+            <p>Пол</p>
+        </td>
+        <td>
+            <p>Дата рождения</p>
+        </td>
+        <td>
+            <p>Адрес</p>
+        </td>
+        <td>
+            <p>Телефон</p>
+        </td>
+        <td>
+            <p>E-mail</p>
+        </td>
+    </tr>
+
+          </thead>
+
+      
+        @{if (ViewBag.Clients != null)
+            {
+                foreach (var c in ViewBag.Clients)
+                {
+        <tbody>
+    <tr>
+        <td><p>@c.FirstName</p></td>
+        <td><p>@c.LastName</p></td>
+        <td><p>@c.FatherName</p></td>
+        <td><p>@c.IIN</p></td>
+        <td><p>@c.Sex</p></td>
+        <td><p>@c.BirthDate</p></td>
+        <td><p>@c.Address</p></td>
+        <td><p>@c.Phone</p></td>
+        <td><p>@c.Email</p></td>
+    </tr>
+         </tbody>
+                }
+            } }
+</table>

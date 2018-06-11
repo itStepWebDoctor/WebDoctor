@@ -10,9 +10,12 @@ namespace WebDoctor.Controllers
     public class AdminController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        
         // GET: Admin
         public ActionResult Index()
         {
+            var clients = db.Users;
+            ViewBag.Clients = clients;
             ViewBag.Message = "Контролер админа";
 
             return View();

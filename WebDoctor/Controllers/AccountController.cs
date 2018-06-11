@@ -154,7 +154,8 @@ namespace WebDoctor.Controllers
                 string userName = model.LastName + " " + model.FirstName + " " + model.FatherName;
                 var user = new ApplicationUser { UserName = userName, Email = model.Email,
                     FirstName = model.FirstName, LastName = model.LastName, FatherName = model.FatherName, IIN = model.IIN,
-                    Sex = model.Sex, Address = model.Address
+                    Sex = model.Sex, Address = model.Address,
+                    Phone = model.Phone
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

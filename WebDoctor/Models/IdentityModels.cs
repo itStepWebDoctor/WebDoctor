@@ -19,6 +19,7 @@ namespace WebDoctor.Models
         public virtual string Sex { get; set; }
 
         public virtual string Address { get; set; }
+        public virtual string Phone { get; set; }
 
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
