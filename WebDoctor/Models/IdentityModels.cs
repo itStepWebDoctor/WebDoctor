@@ -17,6 +17,7 @@ namespace WebDoctor.Models
         public virtual DateTime? BirthDate { get; set; }
         //пол можно сделать Enum
         public virtual string Sex { get; set; }
+        public virtual string Specialization { get; set; }
 
         public virtual string Address { get; set; }
         public virtual string Phone { get; set; }
