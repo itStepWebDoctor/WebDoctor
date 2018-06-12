@@ -77,6 +77,10 @@ namespace WebDoctor.Models
         [Display(Name = "Отчество")]
         public string FatherName { get; set; }
 
+        //[Required]
+        [Display(Name = "Дата рождения")]
+        public DateTime? BirthDate { get; set; }
+
         [Required]
         [Display(Name = "ИИН")]
         public string IIN { get; set; }

@@ -188,3 +188,4 @@ C:\Users\kor_i\Desktop\comProj\WebDoctorProject\WebDoctor\obj\Debug\WebDoctor.pd
 C:\Users\kor_i\Desktop\comProj\WebDoctorProject\WebDoctor\obj\Debug\WebDoctor.Migrations.MigrateDB3.resources
 C:\Users\kor_i\Desktop\comProj\WebDoctorProject\WebDoctor\obj\Debug\WebDoctor.Migrations.MigrateDB4.resources
 C:\Users\kor_i\Desktop\comProj\WebDoctorProject\WebDoctor\obj\Debug\WebDoctor.Migrations.MigrateDB12.resources
+C:\Users\kor_i\Desktop\comProj\WebDoctorProject\WebDoctor\obj\Debug\WebDoctor.csprojResolveAssemblyReference.cache

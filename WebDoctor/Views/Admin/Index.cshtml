@@ -6,60 +6,132 @@
 <h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Список клиентов</p>
+<h4>Список клиентов</h4>
 
 <table class="table table-striped table-condensed table-bordered table-hover">
     <thead>
     <tr>
-        <td>
+        <th>
             <p>Имя</p>
-        </td>
-        <td>
+        </th>
+        <th>
             <p>Фамилия</p>
-        </td>
-        <td>
+        </th>
+        <th>
             <p>Отчество</p>
-        </td>
-        <td>
+        </th>
+        <th>
             <p>ИИН</p>
-        </td>
-        <td>
+        </th>
+        <th>
             <p>Пол</p>
-        </td>
-        <td>
+        </th>
+        <th>
             <p>Дата рождения</p>
-        </td>
-        <td>
+        </th>
+        <th>
             <p>Адрес</p>
-        </td>
-        <td>
+        </th>
+        <th>
             <p>Телефон</p>
-        </td>
-        <td>
+        </th>
+        <th>
             <p>E-mail</p>
-        </td>
+        </th>
+        <th><p>Действия</p></th>
     </tr>
 
-          </thead>
+    </thead>
 
       
-        @{if (ViewBag.Clients != null)
-            {
-                foreach (var c in ViewBag.Clients)
-                {
-        <tbody>
+    @{if (ViewBag.Clients != null)
+      {
+          foreach (var c in ViewBag.Clients)
+          {
+              <tbody>
+              <tr>
+                  <td><p>@c.FirstName</p></td>
+                  <td><p>@c.LastName</p></td>
+                  <td><p>@c.FatherName</p></td>
+                  <td><p>@c.IIN</p></td>
+                  <td><p>@c.Sex</p></td>
+                  <td><p>@c.BirthDate</p></td>
+                  <td><p>@c.Address</p></td>
+                  <td><p>@c.Phone</p></td>
+                  <td><p>@c.Email</p></td>
+
+                  <td>
+                      @*не работает, надо делать*@
+                      @Html.ActionLink("Edit", "Edit") |
+                      @Html.ActionLink("Details", "Details") |
+                      @Html.ActionLink("Delete", "Delete")
+                  </td>
+              </tr>
+              </tbody>
+          }
+      } }
+</table>
+
+<br/>
+<h4>Список заявок</h4>
+
+<table class="table table-striped table-condensed table-bordered table-hover">
+    <thead>
     <tr>
-        <td><p>@c.FirstName</p></td>
-        <td><p>@c.LastName</p></td>
-        <td><p>@c.FatherName</p></td>
-        <td><p>@c.IIN</p></td>
-        <td><p>@c.Sex</p></td>
-        <td><p>@c.BirthDate</p></td>
-        <td><p>@c.Address</p></td>
-        <td><p>@c.Phone</p></td>
-        <td><p>@c.Email</p></td>
+        <th>
+            <p>Дата приёма</p>
+        </th>
+        <th>
+            <p>Время приёма</p>
+        </th>
+        <th>
+            <p>Категория врача</p>
+        </th>
+        <th>
+            <p>Имя врача</p>
+        </th>
+        <th>
+            <p>Дополнительная информация</p>
+        </th>
+        <th>
+            <p>Статус приёма</p>
+        </th>
+        <th>
+            <p>Имя клиента</p>
+        </th>
+        <th>
+            <p>Диагноз</p>
+        </th>
+        <th><p>Действия</p></th>
+        
     </tr>
-         </tbody>
-                }
-            } }
+
+    </thead>
+
+      
+    @{if (ViewBag.Clients != null)
+      {
+          foreach (var r in ViewBag.Recordings)
+          {
+              <tbody>
+              <tr>
+                  <td><p>@r.Date</p></td>
+                  <td><p>@r.Time</p></td>
+                  <td><p>@r.Specialisation</p></td>
+                  <td><p>@r.DoctorName</p></td>
+                  <td><p>@r.AdditionalInfo</p></td>
+                  <td><p>@r.Status</p></td>
+                  <td><p>@r.ClientName</p></td>
+                  <td><p>@r.Diagnos</p></td>
+                  <td>
+                      @*не работает, надо делать*@
+                      @Html.ActionLink("Edit", "Edit") |
+                      @Html.ActionLink("Details", "Details") |
+                      @Html.ActionLink("Delete", "Delete")
+                  </td>
+                 
+              </tr>
+              </tbody>
+          }
+      } }
 </table>
