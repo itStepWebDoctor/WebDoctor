@@ -11,9 +11,11 @@ namespace WebDoctor.Models
         public long Id { get; set; }
         [Required]
         [Display(Name = "Дата приёма")]
+        [DataType(DataType.Date)]
         public DateTime Date { get; set; }
         [Required]
         [Display(Name = "Время приёма")]
+        [DataType(DataType.Time)]
         public TimeSpan Time { get; set; }
         [Required]
         [Display(Name = "Категория врача")]

@@ -38,6 +38,8 @@ namespace WebDoctor.Controllers
         // GET: Client/Create
         public ActionResult Create()
         {
+            SelectList specialisation = new SelectList(db.ClientRecordings, "Specialisation", "Specialisation");
+            ViewBag.Recordings = specialisation;
             return View();
         }
 
