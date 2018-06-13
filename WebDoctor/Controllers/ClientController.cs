@@ -38,8 +38,12 @@ namespace WebDoctor.Controllers
         // GET: Client/Create
         public ActionResult Create()
         {
-            SelectList specialisation = new SelectList(db.ClientRecordings, "Specialisation", "Specialisation");
-            ViewBag.Recordings = specialisation;
+            var specialisation = db.ClientRecordings.Select(x=>x.Specialisation).Distinct();
+            ViewBag.Specialisation = new SelectList(specialisation);
+
+            var doctorName = db.ClientRecordings.Select(x => x.DoctorName).Distinct();
+            ViewBag.DoctorName = new SelectList(doctorName);
+
             return View();
         }
 
