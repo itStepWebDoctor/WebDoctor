@@ -12,7 +12,7 @@ namespace WebDoctor.Controllers
 {
     public class DoctorController : Controller
     {
-        private ClientRecordingContext db = new ClientRecordingContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Doctor
         public ActionResult Index()

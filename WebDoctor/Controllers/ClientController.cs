@@ -12,7 +12,8 @@ namespace WebDoctor.Controllers
 {
     public class ClientController : Controller
     {
-        private ClientRecordingContext db = new ClientRecordingContext();
+        
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Client
         public ActionResult Index()

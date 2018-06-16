@@ -158,10 +158,15 @@ namespace WebDoctor.Controllers
                     Phone = model.Phone
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
+                ApplicationDbContext db = new ApplicationDbContext();
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    //var role = db.Roles.FirstOrDefault(r => r.Name == "Admin");
                     
+                   
+                    //UserManager.AddToRole(user.Id,role.Name);
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+
                     // Дополнительные сведения о том, как включить подтверждение учетной записи и сброс пароля, см. по адресу: http://go.microsoft.com/fwlink/?LinkID=320771
                     // Отправка сообщения электронной почты с этой ссылкой
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);

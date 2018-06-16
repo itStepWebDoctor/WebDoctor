@@ -10,13 +10,13 @@ namespace WebDoctor.Controllers
     public class AdminController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        private ClientRecordingContext dbRec = new ClientRecordingContext();
+        
         
         // GET: Admin
         public ActionResult Index()
         {
             var clients = db.Users;
-            var recordings = dbRec.ClientRecordings;
+            var recordings = db.ClientRecordings;
             ViewBag.Clients = clients;
             ViewBag.Recordings = recordings;
 

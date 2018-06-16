@@ -23,6 +23,7 @@ namespace WebDoctor.Models
         public virtual string Phone { get; set; }
 
 
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Обратите внимание, что authenticationType должен совпадать с типом, определенным в CookieAuthenticationOptions.AuthenticationType
@@ -38,6 +39,7 @@ namespace WebDoctor.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public DbSet<ClientRecording> ClientRecordings { get; set; }
 
         public static ApplicationDbContext Create()
         {
