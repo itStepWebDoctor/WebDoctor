@@ -31,5 +31,6 @@ namespace WebDoctor.Models
         public string ClientName { get; set; }
         [Display(Name = "Диагноз")]
         public string Diagnos { get; set; }
+        public string ClientMail { get; set; }
     }
 }

@@ -152,7 +152,7 @@ namespace WebDoctor.Controllers
             if (ModelState.IsValid)
             {
                 string userName = model.LastName + " " + model.FirstName + " " + model.FatherName;
-                var user = new ApplicationUser { UserName = userName, Email = model.Email,
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email,
                     FirstName = model.FirstName, LastName = model.LastName, FatherName = model.FatherName, IIN = model.IIN,
                     Sex = model.Sex, Address = model.Address,
                     Phone = model.Phone
@@ -161,10 +161,10 @@ namespace WebDoctor.Controllers
                 ApplicationDbContext db = new ApplicationDbContext();
                 if (result.Succeeded)
                 {
-                    //var role = db.Roles.FirstOrDefault(r => r.Name == "Admin");
+                    var role = db.Roles.FirstOrDefault(r => r.Name == "Client");
                     
                    
-                    //UserManager.AddToRole(user.Id,role.Name);
+                    UserManager.AddToRole(user.Id,role.Name);
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
                     // Дополнительные сведения о том, как включить подтверждение учетной записи и сброс пароля, см. по адресу: http://go.microsoft.com/fwlink/?LinkID=320771

@@ -18,7 +18,19 @@ namespace WebDoctor.Controllers
         // GET: Client
         public ActionResult Index()
         {
-            return View(db.ClientRecordings.ToList());
+            string userMailId = GetSessionUserMail();
+
+
+            var recordinUser = db.ClientRecordings.Where(u => u.ClientMail == userMailId);
+
+            ViewBag.RecordinUser = recordinUser;
+
+            
+                return View(recordinUser.ToList());
+            
+
+         
+            
         }
 
         // GET: Client/Details/5
@@ -57,6 +69,7 @@ namespace WebDoctor.Controllers
         {
             if (ModelState.IsValid)
             {
+                clientRecording.ClientMail = GetSessionUserMail();
                 db.ClientRecordings.Add(clientRecording);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -129,6 +142,18 @@ namespace WebDoctor.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public string GetSessionUserMail()
+        {
+            using (var context = ApplicationDbContext.Create())
+            {
+                var identity = User.Identity;
+                var user =
+                    context.Users.FirstOrDefault(currentUser => currentUser.Email == identity.Name);
+
+                return user.Email.ToString();
+            }
         }
     }
 }

@@ -384,7 +384,8 @@ C:\Users\ШвайдюкА\Desktop\WebDoctor\WebDoctor\WebDoctor\obj\Debug\WebDoc
 C:\Users\ШвайдюкА\Desktop\WebDoctor\WebDoctor\WebDoctor\obj\Debug\WebDoctor.Migrations.MigrateDB4.resources
 C:\Users\ШвайдюкА\Desktop\WebDoctor\WebDoctor\WebDoctor\obj\Debug\WebDoctor.Migrations.MigrateDB12.resources
 C:\Users\ШвайдюкА\Desktop\WebDoctor\WebDoctor\WebDoctor\obj\Debug\WebDoctor.Migrations.MigrateDB5.resources
+C:\Users\ШвайдюкА\Desktop\WebDoctor\WebDoctor\WebDoctor\obj\Debug\WebDoctor.Migrations.DB6.resources
 C:\Users\ШвайдюкА\Desktop\WebDoctor\WebDoctor\WebDoctor\obj\Debug\WebDoctor.csproj.GenerateResource.Cache
 C:\Users\ШвайдюкА\Desktop\WebDoctor\WebDoctor\WebDoctor\obj\Debug\WebDoctor.dll
 C:\Users\ШвайдюкА\Desktop\WebDoctor\WebDoctor\WebDoctor\obj\Debug\WebDoctor.pdb
-C:\Users\ШвайдюкА\Desktop\WebDoctor\WebDoctor\WebDoctor\obj\Debug\WebDoctor.Migrations.DB6.resources
+C:\Users\ШвайдюкА\Desktop\WebDoctor\WebDoctor\WebDoctor\obj\Debug\WebDoctor.Migrations.Db7.resources

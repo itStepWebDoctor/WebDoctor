@@ -40,10 +40,13 @@ namespace WebDoctor.Models
         {
         }
         public DbSet<ClientRecording> ClientRecordings { get; set; }
+        //public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+        
     }
 }
